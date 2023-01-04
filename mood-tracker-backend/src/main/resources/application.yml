@@ -1,0 +1,15 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /mood-tracker 
+
+spring:
+  datasource:
+    url: jdbc:mariadb://127.0.0.1:9041/fuel50?autoReconnect=true&useSSL=false&useTimezone=true&serverTimezone=UTC
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: mariadb123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MariaDBDialect
