@@ -38,3 +38,15 @@ Then, go on src/main/java, open the package com.fuel50.mood.tracker and run the 
 When the project is running, open the web browser on http://localhost:8081/mood-tracker/api/v1/ping to verify that everything is okay
 You should see "API is working" in the browser
 ```
+
+
+### API Documentation - Swagger UI
+
+```
+To download the yaml file
+http://localhost:8081/mood-tracker/api-docs.yaml
+
+
+swagger-ui
+http://localhost:8081/mood-tracker/swagger-ui.html
+```
