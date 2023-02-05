@@ -26,6 +26,18 @@ jobs:
       - run:
           name: "Install find command"
           command: "sudo apt-get install find"
+      - run:
+          name: "Install xargs command"
+          command: "sudo apt-get install xargs"
+
+  maven-verify:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Maven package"
+          command: "mvn clean package"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -34,3 +46,4 @@ workflows:
     jobs:
       - say-hello
       - install-find-command
+      - maven-verify
